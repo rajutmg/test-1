@@ -1,0 +1,88 @@
+<section>
+<div class="section nomargin nopadding" style="background: url('demos/gym/images/section/bg-2.jpg') center center no-repeat; background-size: cover;">
+                    <div class="section nomargin" style="background: rgba(0,0,0,0.3);">
+                        <div class="container clearfix">
+                            <div class="dark nobottomborder nobottommargin center">
+                                <h2 class="nott t700 ls1 sec_title">Choose the one that Fits your Goal</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="trial" class="section nomargin nobg">
+                        <div class="container clearfix">
+                            <div id="pricing-switch" class="pricing row bottommargin-sm clearfix">
+
+                                <div class="col-lg-4 col-md-6 box_price">
+                                    <div class="pricing-box">
+                                        <div class="pricing-title">
+                                            <div class="holder">
+                                                <div class="holder_cov">
+                                                    <a>Brand new</a>
+                                                </div>
+                                            </div>
+                                            <div class="pricing_body">
+                                                <h2>Start the Change</h2>
+                                                <p class="free free1" th:text="${weeklyOffer.freeDay + ' Days FREE'}">3 Days FREE</p>
+                                                <p th:utext="${'after ' +weeklyOffer.currencySymbol+weeklyOffer.price+' per week<br>Only '+weeklyOffer.currencySymbol+weeklyOffer.perDayPrice+' a day'}">
+                                                after â‚¬4.49 per week <br> 
+                                                (Only â‚¬0.64 a day)
+                                                </p>
+                                                <hr>
+                                                <p><strong>This is the right membership to start!</strong> Are you ready to live healthier and happer starting of today?</p>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{'/join?planId='+${weeklyOffer.serviceId}}" class="button button-large button-dark button-rounded capitalize button-circle ls0">Click To Get Free Trial  </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 box_price">
+                                    <div class="pricing-box">
+                                        <div class="pricing-title">
+                                            <div class="holder">
+                                                <div class="holder_cov">
+                                                    <a>Most Popular</a>
+                                                </div>
+                                            </div>
+                                            <div class="pricing_body">
+                                                <h2>Start to see results</h2>
+                                                <p class="price" th:utext="${'<strike>'+monthlyOffer.actualPrice+'</strike><br>after ' +monthlyOffer.currencySymbol+monthlyOffer.price+' per month<br>Only '+monthlyOffer.currencySymbol+monthlyOffer.perDayPrice+' a day'}">
+                                                <strike>$18.36</strike><br>
+                                                â‚¬14.99 per month<br> 
+                                                (Only $0.49 a day)
+                                               	</p>
+                                                <hr>
+                                                <p>Gain strenght and confidence in just a month! <strong>Ready to give you a chance?</strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{'/join?planId='+${monthlyOffer.serviceId}}" class="button button-large button-dark button-rounded capitalize button-circle ls0">Click To Get Started</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 box_price">
+                                    <div class="pricing-box">
+                                        <div class="pricing-title">
+                                            <div class="holder">
+                                                <div class="holder_cov">
+                                                    <a>best value</a>
+                                                </div>
+                                            </div>
+                                            <div class="pricing_body">
+                                                <h2>Start a healthy habit</h2>
+                                                <p class="price" th:utext="${'<strike>'+quarterlyOffer.actualPrice+'</strike><br>after ' +quarterlyOffer.currencySymbol+quarterlyOffer.price+' every 3 months<br>Only '+quarterlyOffer.currencySymbol+quarterlyOffer.perDayPrice+' a day'}">
+                                                <strike>$55.08</strike><br> 
+                                                â‚¬34.99 every 3 months<br> 
+                                                (Only $0.38 a day)
+                                                </p>
+                                                <hr>
+                                                <p>Creating a healthy habit is the first step to a great lifestyle. <strong>Prepare to change your life on the long run!</strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{'/join?planId='+${quarterlyOffer.serviceId}}" class="button button-large button-dark button-rounded capitalize button-circle ls0">Click To Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
+
+</section>
